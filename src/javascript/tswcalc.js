@@ -7,6 +7,7 @@ var tswcalc = tswcalc || {};
 tswcalc = function() {
     var init = function() {
         renderContainer(tswcalc.data.template_data);
+        startI18n();
         addHash();
 
         activateToolTips();
@@ -57,6 +58,12 @@ tswcalc = function() {
                 console.log(err);
             }
             $('.container').html(out);
+        });
+    };
+
+    var startI18n = function() {
+        i18n.init(function(t) {
+            $('.container').i18n();
         });
     };
 

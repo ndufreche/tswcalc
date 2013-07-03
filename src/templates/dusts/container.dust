@@ -1,6 +1,6 @@
 <div class="masthead">
   <ul class="nav nav-pills pull-right">
-    <li class="active"><a href="#">Calculator</a></li>
+    <li class="active"><a href="#" data-i18n="nav.calculator"></a></li>
     <li><a href="https://github.com/joakibj/tswcalc" target="_blank">Github</a></li>
   </ul>
   <h2 class="muted">tswcalc</h2>
