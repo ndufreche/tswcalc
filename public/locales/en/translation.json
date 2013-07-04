@@ -1,5 +1,22 @@
 {
     "nav": {
         "calculator": "Calculator"
+    },
+    "buttonbar": {
+        "reset": "Reset",
+        "all_dps": "All DPS",
+        "all_healer": "All Healer",
+        "all_tank": "All Tank",
+        "all_10_4": "All 10.4",
+        "all_10_5": "All 10.5",
+        "export": {
+            "btn": "Export",
+            "url": "URL",
+            "bbcode": "BBCode"
+        },
+        "export_modal": {
+            "title": "Export",
+            "modal_body": "Copy this and share:"
+        }
     }
 }
