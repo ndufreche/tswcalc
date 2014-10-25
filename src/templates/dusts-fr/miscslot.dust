@@ -1,0 +1,35 @@
+<div id="misc-slot" class="slot">
+  <h4 class="slot">Miscellaneous</h4> <h4 id="misc-name" class="slot-name"></h4>
+  <table class="table table-slots">
+    <tr>
+      <td><a href="#" class="consumable-tooltip" data-toggle="tooltip" title="Anima pure consomable. Sélectioner le consomable rajoutera les statisque à votre build."><img id="pure-anima-border" class="item-border" src="assets/images/icons/normal.png"/><img id="pure-anima-icon" class="consumable" src="assets/images/icons/pure_anima_ar.png"/></a></td>
+      <td>
+        <select id="pure-anima" title="Sélectioner votre Anima Pure">
+          <option value="none">Aucun</option>
+          <option value="health">Santé Max</option>
+          <option value="attack-rating">Valeur d'Attaque</option>
+          <option value="heal-rating">Valeur de Guérison</option>
+        </select>
+      </td>
+      <td id="pure-anima-description" class="item-description"></td>
+    </tr>
+    <tr>
+      <td><a href="#" class="consumable-tooltip" data-toggle="tooltip" title="Anima  consomable. Sélectioner le consomable rajoutera les statisque à votre build."><img id="pure-anima-border" class="item-border" src="assets/images/icons/normal.png"/><img id="pure-anima-icon" class="consumable" src="assets/images/icons/anima_crit_rating.png"/></a></td>
+      <td>
+        <select id="anima" title="Sélectioner votre Anima Pure">
+          <option value="none">Aucun</option>
+          <option value="critical-rating">Valeur de Critique</option>
+          <option value="critical-power">Amélioration Déguâts Critiques</option>
+          <option value="penetration-rating">Valeur de Pénétration</option>
+          <option value="hit-rating">Valeur de Touché</option>
+          <option value="block-rating">Valeur de Parade</option>
+          <option value="defense-rating">Valeur de Défense</option>
+          <option value="evade-rating">Valeur d'Evitement</option>
+          <option value="physical-protection">Valeur de Protection Physique</option>
+          <option value="magical-protection">Valeur de Protection Magique</option>
+        </select>
+      </td>
+      <td id="anima-description" class="item-description"></td>
+    </tr>
+  </table>
+</div>

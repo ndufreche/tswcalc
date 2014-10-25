@@ -1,0 +1,81 @@
+
+{#slots}
+          <div id="{id_prefix}-slot" class="slot">
+            <h4 class="slot">{name}</h4> <h4 id="{id_prefix}-name" class="slot-name"></h4> <span id="{id_prefix}-name-warning" class="label label-important"><a class="slot-warning" href="#" data-toggle="tooltip"><i class="icon-warning-sign icon-white"></i></a></span>
+            <table class="table table-slots">
+              <tr>
+            {^is_weapon}
+              <td class="role-label"><strong>Rôle : </strong></td>
+              <td class="role-select">
+                <select id="{id_prefix}-role" class="select-role" title="Please select role">
+                  <option value="none" selected="true">Aucun</option>
+                  <option value="dps">DPS</option>
+                  <option value="tank">Tank</option>
+                  <option value="healer">Healer</option>
+                </select>
+              </td>
+            {:else}
+              <td class="wtype-label"><strong>Type: </strong></td>
+              <td class="wtype-select">
+                <select id="{id_prefix}-wtype" class="select-wtype" title="Please select weapon type">
+                  <option value="none" selected="true">Aucun</option>
+                  <option value="blade">Epée</option>
+                  <option value="hammer">Marteau</option>
+                  <option value="fist">Point</option>
+                  <option value="blood">Sang</option>
+                  <option value="chaos">Chaos</option>
+                  <option value="elementalism">Elementaliste</option>
+                  <option value="shotgun">Fusils à pompe</option>
+                  <option value="pistol">Pistolets</option>
+                  <option value="assault-rifle">Fusils d'assaut</option>
+                </select>
+              </td>
+            {/is_weapon}
+              <td class="ql-label"><strong>QL:</strong></td><td class="ql-select">{>qlselect id_suffix=""/}</td>
+              {^is_weapon}
+                <td><label class="checkbox inline"><input type="checkbox" id="{id_prefix}-nyraid" value="nyraid" disabled="disabled">NY Raid</label></td>
+              {:else}
+                <td><a id="{id_prefix}-swap-weapon" class="btn btn-info swap-weapon" href="#"><i class="icon-retweet icon-white icon-align-left"></i> Swap weapon</a></td>
+              {/is_weapon}
+              <td class="filler"></td></tr>
+            </table>
+            <div>
+              <table id="{id_prefix}-glyphs" class="table table-glyphs">
+              <tr>
+              <td class="glyph-ql" rowspan="2"><a href="#" class="glyph-tooltip" data-toggle="tooltip" title="Glyph for the {name} slot. Choose which QL and stats it will have in your build."><img src="assets/images/icons/glyph.png" alt="Glyph"/></a> {>qlselect id_suffix="-glyph"/}</td>
+              <td><strong>Primary Stat</strong></td>
+              <td>{>statselect id_suffix="primary"/}</td>
+              <td><strong>Distribution:</strong> {>glyphbuttons id_suffix="-primary-glyph"/}</td>
+              <td id="{id_prefix}-primary-glyph-value" class="statvalue">0</td></tr>
+            
+              <tr><td><strong>Secondary Stat</strong></td>
+              <td>{>statselect id_suffix="secondary"/}</td>
+              <td><strong>Distribution:</strong> {>glyphbuttons id_suffix="-secondary-glyph"/}</td>
+              <td id="{id_prefix}-secondary-glyph-value" class="statvalue">0</td></tr>
+              </table>
+            </div>
+            <div>
+              <table id="{id_prefix}-signets" class="table table-signets">
+                <tr>
+                  <td>
+                    <a href="#" class="signet-tooltip" data-toggle="tooltip" title="Insigne pour le slot {name}. Choisissez la qualité et le type de l'insigne.">
+                      <img id="{id_prefix}-signet-img-quality" class="item-border" src="assets/images/icons/normal.png"/><img id="{id_prefix}-signet-img-icon" class="signet" src="assets/images/icons/minor_dps.png"/></a>
+                  </td>
+                  <td>
+                    <select id="{id_prefix}-signet-quality"  title="Choisissez la qualité de l'insigne">
+                      <option value="none" selected="true">Qualité</option>
+                      <option value="normal">Normale</option>
+                      <option value="elite">Elite</option>
+                      <option value="epic">Epique</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select id="{id_prefix}-pick-signet" title="Please select signet">
+                    </select></td>
+                    <td id="{id_prefix}-signet-description" class="item-description"></td></tr>
+              </table>
+            </div>
+          </div>  
+{:else}
+  <p>No slots found (Bug)!</p>
+{/slots}
